@@ -10,6 +10,12 @@ module.exports = {
       user: 'postgres',
       password: process.env.PASSWORD,
     },
+    migrations: {
+      directory: './migrations',
+    },
+    seeds: {
+      directory: './seeds',
+    }
   },
 
   staging: {
