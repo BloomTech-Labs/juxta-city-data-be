@@ -19,6 +19,10 @@ function get(user_id) {
     .where({ 'users.id': user_id });
 }
 
+function getAll() {
+  return db('favorites');
+}
+
 function remove(user_id, city_id) {
   return db('favorites')
     .where({ 'user_id': user_id, 'city_id': city_id })
