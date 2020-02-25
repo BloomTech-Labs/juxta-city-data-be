@@ -11,10 +11,10 @@ module.exports = {
       password: process.env.PASSWORD,
     },
     migrations: {
-      directory: './migrations',
+      directory: './data/migrations',
     },
     seeds: {
-      directory: './seeds',
+      directory: './data/seeds',
     }
   },
 
