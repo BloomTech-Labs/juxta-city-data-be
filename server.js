@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 const errorHandler = require('./middleware/errorHandler');
+const usersRouter = require('./routers/users-router.js');
 
 const server = express();
 
@@ -16,6 +17,8 @@ server.use(morgan('dev'));
 server.get('/', (req, res) => {
   res.send('Hello City');
 });
+
+server.use('/api/users', usersRouter);
 
 server.use(errorHandler);
 
