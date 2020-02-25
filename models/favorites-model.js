@@ -14,6 +14,7 @@ function get(user_id) {
     .select(
       'users.id AS user_id',
       'users.username AS user_username',
+      'favorites.city_id'
     )
     .where({ 'users.id': user_id });
 }
