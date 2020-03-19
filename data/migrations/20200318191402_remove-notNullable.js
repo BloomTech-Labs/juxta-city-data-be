@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
   return knex.schema.alterTable('users', function(t) {
-    t.string('email', 124).unique().alter();
+    t.string('email', 124).alter();
     t.string('first_name', 124).alter();
     t.string('last_name', 124).alter();
     t.string('dob').alter()
