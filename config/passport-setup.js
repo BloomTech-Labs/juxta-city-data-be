@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const passport = require('passport')
 const keys = require('./secrets.js')
-const User = require('../models/users-model.js')
+const User = require('../auth/authenication-model.js')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const GitHubStrategy = require('passport-github').Strategy
 
