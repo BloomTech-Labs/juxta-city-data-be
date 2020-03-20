@@ -1,11 +1,15 @@
-const express = require('express');
+require('dotenv').config()
 
+const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const passport = require('passport')
+const passportSetup = require('./config/passport-setup.js')
+const keys = require('./config/secrets.js')
 
 const errorHandler = require('./middleware/errorHandler');
-const usersRouter = require('./routers/users-router.js');
+const authenticationRouter = require('./auth/authentication-router.js');
 
 const server = express();
 
@@ -13,12 +17,13 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 server.use(morgan('dev'));
+server.use(passport.initialize())
 
 server.get('/', (req, res) => {
   res.send('Hello City');
 });
 
-server.use('/api/users', usersRouter);
+server.use('/api/auth', authenticationRouter);
 
 server.use(errorHandler);
 
