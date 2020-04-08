@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node index.js",
-    "start": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,19 +19,18 @@
   },
   "homepage": "https://github.com/Lambda-School-Labs/juxta-city-data-be#readme",
   "dependencies": {
+    "@okta/oidc-middleware": "^4.0.0",
     "bcrypt": "^3.0.8",
-    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "cross-env": "^7.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.10",
     "knex-cleaner": "^1.3.0",
     "morgan": "^1.9.1",
-    "passport": "^0.4.1",
-    "passport-github2": "^0.1.11",
     "pg": "^7.18.1"
   },
   "devDependencies": {

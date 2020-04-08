@@ -1,11 +1,9 @@
-if (process.env.ENV !== 'production') {
-  require('dotenv').config()
-}
+require('dotenv').config();
 
-const server = require("./api/server.js");
+const server = require('./server');
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, function () {
-  console.log(`\n *** Service is running on localhost:${PORT} *** \n`);
+server.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
 });

@@ -5,9 +5,9 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      host: process.env.DB_HOST,
-      database: process.env.DB_NAME,
-      user: process.env.DB_USERNAME,
+      host: '127.0.0.1',
+      database: 'findur-db',
+      user: 'postgres',
       password: process.env.PASSWORD,
     },
     migrations: {
