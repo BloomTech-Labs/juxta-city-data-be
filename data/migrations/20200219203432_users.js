@@ -1,7 +1,7 @@
 exports.up = function (knex) {
   return knex.schema
     .createTable("users", (user) => {
-      user.increments();
+      user.increments('id');
       user.string("username", 255).notNullable().unique();
       user.string("email", 255).notNullable().unique();
       user.string("password", 255).notNullable();
@@ -14,6 +14,7 @@ exports.up = function (knex) {
       user.integer("zip", 62);
     })
     .createTable("favorites", (favorite) => {
+      favorite.increments('id');
       favorite
         .integer("user_id")
         .unsigned()
