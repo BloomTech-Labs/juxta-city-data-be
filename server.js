@@ -6,7 +6,6 @@ const morgan = require("morgan");
 
 const errorHandler = require("./middleware/errorHandler");
 const usersRouter = require("./routers/users-router.js");
-//const { oidcSession, oidc } = require('./middleware/oidc-router.js')
 
 const server = express();
 
@@ -14,8 +13,6 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 server.use(morgan("dev"));
-server.use(oidcSession);
-server.use(oidc.router);
 
 server.get("/", (req, res) => {
   res.send("Hello City");
