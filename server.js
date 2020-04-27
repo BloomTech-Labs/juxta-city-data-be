@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 
 const errorHandler = require("./middleware/errorHandler");
+const authenticator = require("./middleware/authentication.js");
 const usersRouter = require("./routers/users-router.js");
 const authRouter = require("./routers/authentication-router.js");
 
@@ -19,7 +20,7 @@ server.get("/", (req, res) => {
   res.send("Hello City");
 });
 
-server.use("/api/users", usersRouter);
+server.use("/api/users", authenticator, usersRouter);
 server.use("/api/auth", authRouter);
 
 server.use(errorHandler);
