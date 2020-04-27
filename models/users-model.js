@@ -1,4 +1,5 @@
 const db = require("../data/dbConfig.js");
+const bcrypt = require("bcryptjs");
 
 async function add(user) {
   const [id] = await db("users").returning("id").insert(user);
@@ -23,6 +24,7 @@ function remove(id) {
 }
 
 async function update(user, id) {
+  user.password = bcrypt.hashSync(user.password, 12);
   await db("users").where({ id }).update(user);
 
   return db("users").where({ id }).first();
