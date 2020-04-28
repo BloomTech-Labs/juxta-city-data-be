@@ -12,12 +12,19 @@ router.post("/signup", async (req, res, next) => {
   try {
     const addedUser = await Users.add(user);
 
-    !addedUser
-      ? next({
-          status: 400,
-          message: `Unable to add user to DB`,
-        })
-      : res.status(201).json(addedUser);
+    if (!addedUser) {
+      next({
+        status: 400,
+        message: `Error: Unable to sign up.`,
+      });
+    } else {
+      const token = genToken(addedUser);
+      res.status(200).json({
+        message: `Welcome ${user.username}`,
+        ...addedUser,
+        token,
+      });
+    }
   } catch (err) {
     next({
       message: err,
