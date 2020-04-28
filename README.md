@@ -46,45 +46,38 @@ Find Ur City presents this important data in an intuitive and easy to understand
 - View detailed information about individual cities
 - Ability to save your Favorite cities
 
-## Tech Stack
-
----
-
 ### Backend framework goes here
 
-🚫 Why did you choose this framework?
+This stack was used in complaince with the [Labs Engineering Standards](https://labs.lambdaschool.com/)
 
-- Point One
-- Point Two
-- Point Three
-- Point Four
+- NodeJS
+- ExpressJS
+- PostgreSQL
+- REST
+- JWT Authentication
 
 ## 2️⃣ Endpoints
 
-🚫This is a placeholder, replace the endpoints, access controll, and descriptioin to match your project
+#### Authentication Routes
 
-#### Organization Routes
-
-| Method | Endpoint                | Access Control | Description                                  |
-| ------ | ----------------------- | -------------- | -------------------------------------------- |
-| GET    | `/organizations/:orgId` | all users      | Returns the information for an organization. |
-| PUT    | `/organizatoins/:orgId` | owners         | Modify an existing organization.             |
-| DELETE | `/organizations/:orgId` | owners         | Delete an organization.                      |
+| Method | Endpoint           | Access Control | Description                |
+| ------ | ------------------ | -------------- | -------------------------- |
+| POST   | `/api/auth/signup` | all users      | Create a new user sign up. |
+| POST   | `/api/auth/signin` | all users      | Current user sign in .     |
 
 #### User Routes
 
-| Method | Endpoint                | Access Control      | Description                                        |
-| ------ | ----------------------- | ------------------- | -------------------------------------------------- |
-| GET    | `/users/current`        | all users           | Returns info for the logged in user.               |
-| GET    | `/users/org/:userId`    | owners, supervisors | Returns all users for an organization.             |
-| GET    | `/users/:userId`        | owners, supervisors | Returns info for a single user.                    |
-| POST   | `/users/register/owner` | none                | Creates a new user as owner of a new organization. |
-| PUT    | `/users/:userId`        | owners, supervisors |                                                    |
-| DELETE | `/users/:userId`        | owners, supervisors |                                                    |
+| Method | Endpoint                           | Access Control      | Description                                        |
+| ------ | ---------------------------------- | ------------------- | -------------------------------------------------- |
+| GET    | `/api/users/`                      | all users           | Returns info for the logged in user.               |
+| GET    | `/api/users/:id`                   | owners, supervisors | Returns all users for an organization.             |
+| GET    | `/api/users/:id/favorites`         | owners, supervisors | Returns info for a single user.                    |
+| POST   | `/api/users/:id/favorites`         | none                | Creates a new user as owner of a new organization. |
+| PUT    | `/api/users/:id`                   | owners, supervisors |                                                    |
+| DELETE | `/api/users/:id`                   | owners, supervisors |                                                    |
+| DELETE | `/api/users/:id/favorites/:cityId` | users               | Deletes                                            |
 
 # Data Model
-
-🚫This is just an example. Replace this with your data model
 
 #### 2️⃣ ORGANIZATIONS
 
@@ -200,5 +193,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Frontend Documentation](🚫link to your frontend readme here) for details on the fronend of our project.
-🚫 Add DS iOS and/or Andriod links here if applicable.
+See [Findur.City Frontend Documentation](https://github.com/Lambda-School-Labs/juxta-city-data-fe) for details on the frontend of our project.
