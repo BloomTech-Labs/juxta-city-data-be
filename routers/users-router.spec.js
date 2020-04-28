@@ -14,4 +14,12 @@ describe("users-router.js", () => {
     const response = await request(server).get("/1/favorites");
     expect(response.status).toEqual(404);
   });
+  it("should return a status of 404 if not logged in for /:id/favorites/:cityId", async () => {
+    const response = await request(server).get("/1/favorites/1");
+    expect(response.status).toEqual(404);
+  });
+
+  it("expects JSON", () => {
+    return request(server).get("/").expect("Content-Type", /html/);
+  });
 });
