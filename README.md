@@ -58,11 +58,12 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 
 # Testing
 
-#### React Testing Library (Jest)
+#### Jest and Supertest
 
 Why?
 
-- Made for React Testing
+- Uses Jest as the testing framework for Node
+- Allows the testing of API routes
 - Focus on simplicity
 - Minimal configuration
 
@@ -92,29 +93,35 @@ npm run start
 
 ## Endpoints
 
+#### Server Test Route
+
+| Method | Endpoint | Access Control | Description                                            |
+| ------ | -------- | -------------- | ------------------------------------------------------ |
+| GET    | `/`      | all users      | Returns server is running confimation of `Hello City`. |
+
 #### Authentication Routes
 
 | Method | Endpoint           | Access Control | Description                |
 | ------ | ------------------ | -------------- | -------------------------- |
 | POST   | `/api/auth/signup` | all users      | Create a new user sign up. |
-| POST   | `/api/auth/signin` | all users      | Current user sign in .     |
+| POST   | `/api/auth/signin` | all users      | Current user sign in.      |
 
 #### User Routes
 
-| Method | Endpoint         | Access Control      | Description                            |
-| ------ | ---------------- | ------------------- | -------------------------------------- |
-| GET    | `/api/users/`    | all users           | Returns info for the logged in user.   |
-| GET    | `/api/users/:id` | owners, supervisors | Returns all users for an organization. |
-| PUT    | `/api/users/:id` | owners, supervisors |                                        |
-| DELETE | `/api/users/:id` | owners, supervisors |                                        |
+| Method | Endpoint         | Access Control   | Description                          |
+| ------ | ---------------- | ---------------- | ------------------------------------ |
+| GET    | `/api/users/`    | registered users | Returns info for the logged in user. |
+| GET    | `/api/users/:id` | registered users | Returns individual user              |
+| PUT    | `/api/users/:id` | registered users | Updates individual user              |
+| DELETE | `/api/users/:id` | registered users | Delete individual user               |
 
 #### Favorite Routes
 
-| Method | Endpoint                           | Access Control      | Description                                        |
-| ------ | ---------------------------------- | ------------------- | -------------------------------------------------- |
-| GET    | `/api/users/:id/favorites`         | owners, supervisors | Returns info for a single user.                    |
-| POST   | `/api/users/:id/favorites`         | none                | Creates a new user as owner of a new organization. |
-| DELETE | `/api/users/:id/favorites/:cityId` | users               | Deletes                                            |
+| Method | Endpoint                           | Access Control   | Description                                 |
+| ------ | ---------------------------------- | ---------------- | ------------------------------------------- |
+| GET    | `/api/users/:id/favorites`         | registered users | Returns favorites for an individual user.   |
+| POST   | `/api/users/:id/favorites`         | registered users | Creates a favorites for an individual user. |
+| DELETE | `/api/users/:id/favorites/:cityId` | registered users | Deletes favorites for individual user.      |
 
 # AUTHENTICATION JSON
 
@@ -193,31 +200,15 @@ npm run start
 
 `add()` -> Adds a new user
 
-`find()` -> Returns all users
+`getBy(filter)` -> Returns user based on filter
 
-`findBy(filter)` -> Returns user based on filter
+`getById(id)` -> Returns a single user by user ID
 
-`findById(id)` -> Returns a single user by user ID
+`getAll()` -> Returns all users
 
-`addUser(user object)` --> Creates a new user and returns that user. Also creates 7 availabilities defaulted to hours of operation for their organization.
+`update(user, id)` -> Updates the user
 
-`updateUser(userId, changes object)` -> Updates a single user by ID.
-
-`deleteUser(userId)` -> deletes everything dependent on the user
-
-## 3️⃣ Environment Variables
-
-In order for the app to function correctly, the user must set up their own environment variables.
-
-create a .env file that includes the following:
-
-🚫 These are just examples, replace them with the specifics for your app
-
-_ STAGING_DB - optional development db for using functionality not available in SQLite
-_ NODE\*ENV - set to "development" until ready for "production"
-
-- JWT*SECRET - you can generate this by using a python shell and running import random''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&amp;*(-_=+)') for i in range(50)])
-  _ SENDGRID_API_KEY - this is generated in your Sendgrid account \* stripe_secret - this is generated in the Stripe dashboard
+`remove(id)` -> deletes everything dependent on the user
 
 ## Contributing
 
