@@ -55,6 +55,27 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 - REST
 - JWT Authentication
 
+#### Dependencies
+
+- bcryptjs: ^2.4.3
+- cors: ^2.8.5
+- cross-env: ^7.0.0
+- dotenv: ^8.2.0
+- express: ^4.17.1
+- express-session: ^1.17.0
+- helmet: ^3.21.2
+- jsonwebtoken: ^8.5.1
+- knex: ^0.20.10
+- knex-cleaner: ^1.3.0
+- morgan: ^1.9.1
+- pg: ^7.18.1
+
+#### Development Dependencies
+
+- jest: ^25.1.0
+- nodemon: ^2.0.2
+- supertest: ^4.0.2
+
 # Testing
 
 #### Jest and Supertest
