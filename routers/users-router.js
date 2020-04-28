@@ -1,3 +1,4 @@
+const bcrypt = require("bcryptjs");
 const router = require("express").Router();
 const Users = require("../models/users-model.js");
 const Favorites = require("../models/favorites-model.js");
