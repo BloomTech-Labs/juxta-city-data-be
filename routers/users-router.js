@@ -1,20 +1,20 @@
-const router = require('express').Router();
-const Users = require('../models/users-model.js');
-const Favorites = require('../models/favorites-model.js');
+const router = require("express").Router();
+const Users = require("../models/users-model.js");
+const Favorites = require("../models/favorites-model.js");
 
-router.get('/', async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   try {
     const users = await Users.getAll();
 
     !users
-      ? next({ message: 'Error retrieving the users' })
+      ? next({ message: "Error retrieving the users" })
       : res.status(200).json(users);
-  } catch(error) {
+  } catch (error) {
     next(error);
   }
 });
 
-router.get('/:id', async (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -22,22 +22,20 @@ router.get('/:id', async (req, res, next) => {
 
     !user
       ? next({
-        status: 404,
-        message: 'Error retrieving the user'
-      })
+          status: 404,
+          message: "Error retrieving the user",
+        })
       : res.status(200).json(user);
-    
-  } catch(error) {
+  } catch (error) {
     next(error);
   }
 });
 
-
-router.put('/:id', async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   const { id } = req.params;
   let user = req.body;
-  //const hash = bcrypt.hashSync(user.password, 12);
-  //user.password = hash;
+  const hash = bcrypt.hashSync(user.password, 12);
+  user.password = hash;
 
   try {
     const updatedUser = await Users.update(user, id);
@@ -45,15 +43,15 @@ router.put('/:id', async (req, res, next) => {
     !updatedUser
       ? next({
           status: 404,
-          message: 'Error updating the user'
+          message: "Error updating the user",
         })
       : res.status(200).json(updatedUser);
-  } catch(error) {
+  } catch (error) {
     next(error);
   }
 });
 
-router.delete('/:id', async (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -62,17 +60,16 @@ router.delete('/:id', async (req, res, next) => {
     result !== 1
       ? next({
           status: 404,
-          message: 'Error deleting the user'
+          message: "Error deleting the user",
         })
-      : res.status(200).json({ message: 'User successfully deleted' });
-
+      : res.status(200).json({ message: "User successfully deleted" });
   } catch (error) {
     next(error);
   }
 });
 
 // user favorites endpoints
-router.get('/:id/favorites', async (req, res, next) => {
+router.get("/:id/favorites", async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -80,36 +77,36 @@ router.get('/:id/favorites', async (req, res, next) => {
 
     !userFavorites
       ? next({
-        status: 404,
-        message: 'Error retrieving user favorites'
-      })
+          status: 404,
+          message: "Error retrieving user favorites",
+        })
       : res.status(200).json(userFavorites);
-  } catch(error) {
+  } catch (error) {
     next(error);
   }
 });
 
-router.post('/:id/favorites', async (req, res, next) => {
+router.post("/:id/favorites", async (req, res, next) => {
   const { id } = req.params;
 
   let userFavorite = req.body;
   userFavorite.user_id = id;
 
   try {
-    const result = await Favorites.add(uservalue);
+    const result = await Favorites.add(userFavorite);
 
     !result
       ? next({
-        status: 404,
-        message: 'Error adding user favorite'
-      })
+          status: 404,
+          message: "Error adding user favorite",
+        })
       : res.status(201).json(result);
-  } catch(error){
+  } catch (error) {
     next(error);
   }
 });
 
-router.delete('/:id/favorites/:cityId', async (req, res, next) => {
+router.delete("/:id/favorites/:cityId", async (req, res, next) => {
   const { id } = req.params;
   const { cityId } = req.params;
 
@@ -118,16 +115,13 @@ router.delete('/:id/favorites/:cityId', async (req, res, next) => {
 
     result !== 1
       ? next({
-        status: 404,
-        message: 'Error deleting the favorite city'
-      })
-      : res.status(200).json({ message: 'Favorite city succesfully deleted'});
-
-  } catch(error){
+          status: 404,
+          message: "Error deleting the favorite city",
+        })
+      : res.status(200).json({ message: "Favorite city succesfully deleted" });
+  } catch (error) {
     next(error);
   }
 });
-
-
 
 module.exports = router;
