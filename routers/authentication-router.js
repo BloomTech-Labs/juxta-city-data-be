@@ -4,32 +4,33 @@ const jwt = require("jsonwebtoken");
 const secrets = require("../config/secrets.js");
 const Users = require("./../models/users-model.js");
 
-router.post("/signup", (req, res, next) => {
+router.post("/signup", async (req, res, next) => {
   const user = req.body;
   const hash = bcrypt.hashSync(user.password, 12);
   user.password = hash;
 
   try {
-    const user = Users.add(user);
+    const addedUser = await Users.add(user);
 
-    !user
+    !addedUser
       ? next({
           status: 400,
           message: `Unable to add user to DB`,
         })
-      : res.status(201).json(user);
+      : res.status(201).json(addedUser);
   } catch (err) {
+    console.log(err);
     next({
       message: err,
     });
   }
 });
 
-router.post("/signin", (req, res, next) => {
+router.post("/signin", async (req, res, next) => {
   const { username, password } = req.body;
 
   try {
-    const user = Users.getBy(username);
+    const user = await Users.getBy(username);
 
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = genToken(user);
@@ -44,6 +45,7 @@ router.post("/signin", (req, res, next) => {
       });
     }
   } catch (err) {
+    console.log(err);
     next({
       message: err,
     });
