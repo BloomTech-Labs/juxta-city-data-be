@@ -46,7 +46,7 @@ Find Ur City presents this important data in an intuitive and easy to understand
 - View detailed information about individual cities
 - Ability to save your Favorite cities
 
-### Backend framework goes here
+### Backend framework
 
 This stack was used in complaince with the [Labs Engineering Standards](https://labs.lambdaschool.com/)
 
@@ -56,7 +56,41 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 - REST
 - JWT Authentication
 
-## 2️⃣ Endpoints
+# Testing
+
+#### React Testing Library (Jest)
+
+Why?
+
+- Made for React Testing
+- Focus on simplicity
+- Minimal configuration
+
+# Installation Instructions
+
+Make sure you have [PostgreSQL](https://www.postgresql.org/) and [pgAdmin4](https://www.pgadmin.org/) installed on your computer.
+
+```sh
+git clone https://github.com/Lambda-School-Labs/juxta-city-data-be.git
+cd juxta-city-data-be
+npm install
+npm run start
+```
+
+## Other Scripts
+
+    * server    - runs the app in development mode using nodemon
+    * start     - runs the app in development mode using node
+    * test      - runs the test watcher in an interactive mode
+    * coverage  - generates a test coverage report
+    * mlt       - runs knex migrate latest in testing enviroment
+    * mrt       - runs knex migrate rollback in testing enviroment
+    * ml        - runs knex migrate latest
+    * mr        - runs knex migrate rollback
+    * srt       - runs knex seed run in testing enviroment
+    * sr        - runs knex seed run
+
+## Endpoints
 
 #### Authentication Routes
 
@@ -143,11 +177,13 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 }
 ```
 
-## 2️⃣ Actions
+## Actions
 
 `add(favorite)` -> Adds a new favorite to the user
 
 `get(user_id)` -> Returns a single user by ID to retreive their favorites
+
+`getAll()` -> Returns all favorites
 
 `remove(user_id, city_id)` -> Returns the created org
 
