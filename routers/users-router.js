@@ -93,7 +93,7 @@ router.post("/:id/favorites", async (req, res, next) => {
   userFavorite.user_id = id;
 
   try {
-    const result = await Favorites.add(uservalue);
+    const result = await Favorites.add(userFavorite);
 
     !result
       ? next({
