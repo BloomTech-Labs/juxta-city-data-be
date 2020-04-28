@@ -67,19 +67,24 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 
 #### User Routes
 
+| Method | Endpoint         | Access Control      | Description                            |
+| ------ | ---------------- | ------------------- | -------------------------------------- |
+| GET    | `/api/users/`    | all users           | Returns info for the logged in user.   |
+| GET    | `/api/users/:id` | owners, supervisors | Returns all users for an organization. |
+| PUT    | `/api/users/:id` | owners, supervisors |                                        |
+| DELETE | `/api/users/:id` | owners, supervisors |                                        |
+
+#### Favorite Routes
+
 | Method | Endpoint                           | Access Control      | Description                                        |
 | ------ | ---------------------------------- | ------------------- | -------------------------------------------------- |
-| GET    | `/api/users/`                      | all users           | Returns info for the logged in user.               |
-| GET    | `/api/users/:id`                   | owners, supervisors | Returns all users for an organization.             |
 | GET    | `/api/users/:id/favorites`         | owners, supervisors | Returns info for a single user.                    |
 | POST   | `/api/users/:id/favorites`         | none                | Creates a new user as owner of a new organization. |
-| PUT    | `/api/users/:id`                   | owners, supervisors |                                                    |
-| DELETE | `/api/users/:id`                   | owners, supervisors |                                                    |
 | DELETE | `/api/users/:id/favorites/:cityId` | users               | Deletes                                            |
 
 # Data Model
 
-#### 2️⃣ ORGANIZATIONS
+#### 2️⃣ AUTHENTICATION
 
 ---
 
@@ -100,17 +105,27 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 
 ```
 {
-  id: UUID
-  organization_id: UUID foreign key in ORGANIZATIONS table
-  first_name: STRING
-  last_name: STRING
-  role: STRING [ 'owner', 'supervisor', 'employee' ]
-  email: STRING
-  phone: STRING
-  cal_visit: BOOLEAN
-  emp_visit: BOOLEAN
-  emailpref: BOOLEAN
-  phonepref: BOOLEAN
+  id: auto-increment
+  username: "ronmac",
+  password: "happymeal",
+  first_name: "Ronald",
+  last_name: "mcdonald",
+  dob: "1963-03-28",
+  address: "876 w 16th St",
+  city: "New York",
+  state: "New York",
+  zip: 92312
+}
+```
+
+#### FAVORITES
+
+---
+
+```
+{
+  user_id: 1,
+  city_id: 1028
 }
 ```
 
