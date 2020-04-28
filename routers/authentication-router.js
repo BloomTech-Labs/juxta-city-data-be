@@ -19,7 +19,6 @@ router.post("/signup", async (req, res, next) => {
         })
       : res.status(201).json(addedUser);
   } catch (err) {
-    console.log(err);
     next({
       message: err,
     });
@@ -30,7 +29,7 @@ router.post("/signin", async (req, res, next) => {
   const { username, password } = req.body;
 
   try {
-    const user = await Users.getBy(username);
+    const [user] = await Users.getBy({ username });
 
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = genToken(user);
