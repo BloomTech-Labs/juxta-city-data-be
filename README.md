@@ -1,133 +1,232 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline. Feel free to add your own flare to it.
+# Find Ur City
 
-🚫 The numbers 1️⃣ through 3️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
+You can find the deployed project at [https://www.findur.city](https://www.findur.city)
 
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
+## Contributors
 
-# API Documentation
+|                                       [Alfonso Ruiz](https://github.com/alfonsoruiz)                                       |                                          [Jack Kim](https://github.com/jackskim)                                          |                                        [Logan Karnes](https://github.com/lkarnes)                                         |                                         [Zac Smith](https://github.com/mrzacsmith)                                          |
+| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
+|                     [<img src="./assets/alfonso.png" width = "200" />](https://github.com/alfonsoruiz)                     |                       [<img src="./assets/jack.jpeg" width = "200" />](https://github.com/jackskim)                       |                       [<img src="./assets/logan.png" width = "200" />](https://github.com/lkarnes)                        |                       [<img src="./assets/zac.jpeg" width = "200" />](https://github.com/mrzacsmith)                        |
+|                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/alfonsoruiz)                  |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/jackskim)                   |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/lkarnes)                    |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/mrzacsmith)                   |
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/mralfonsoruiz) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jackskim/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/logan-karnes) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/mrzacsmith/) |
 
-#### 1️⃣ Backend delpoyed at [Finidur.city](https://production-juxta-city-be.herokuapp.com/) <br>
+<br>
+<br>
 
-## 1️⃣ Getting started
+![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![Code Coverage](https://api.codeclimate.com/v1/badges/d3f9ebd125b9496789a3/maintainability)
+![Test Coverage](https://api.codeclimate.com/v1/badges/d3f9ebd125b9496789a3/test_coverage)
 
-To get the server running locally:
+## Project Overview
 
-🚫 adjust these scripts to match your project
+[Trello Board](https://trello.com/b/R2QOaAEe/labspt7-juxta-city-data)
 
-- Clone this repo
-- **yarn install** to install all required dependencies
-- **yarn server** to start the local server
-- **yarn test** to start server using testing environment
+[Product Canvas](https://www.notion.so/Juxta-City-Data-06550a97dd9b41f1aea4b4b6de46ecb5)
 
-### Backend framework goes here
+[UX Design files](https://www.figma.com/file/YS5Ykd25k90FbD7UkDq2fa/Juxta-City-Data-Ryan-and-Stephen?node-id=769%3A23)
 
-🚫 Why did you choose this framework?
+Find Ur City provides city data about important factors in deciding where to live, such as:
 
-- Point One
-- Point Two
-- Point Three
-- Point Four
+- Population
+- Average resident age
+- Climate
+- Median household income
+- Cost of living
+- Average Commute time
+- and much more!
 
-## 2️⃣ Endpoints
+Find Ur City presents this important data in an intuitive and easy to understand interface.
 
-🚫This is a placeholder, replace the endpoints, access controll, and descriptioin to match your project
+### Key Features
 
-#### Organization Routes
+- Ability to search for a city located in the US
+- Customized 'Recommended Cities' list based on user's survey selections
+- View detailed information about individual cities
+- Ability to save your Favorite cities
 
-| Method | Endpoint                | Access Control | Description                                  |
-| ------ | ----------------------- | -------------- | -------------------------------------------- |
-| GET    | `/organizations/:orgId` | all users      | Returns the information for an organization. |
-| PUT    | `/organizatoins/:orgId` | owners         | Modify an existing organization.             |
-| DELETE | `/organizations/:orgId` | owners         | Delete an organization.                      |
+### Backend framework
+
+This stack was used in complaince with the [Labs Engineering Standards](https://labs.lambdaschool.com/)
+
+- NodeJS
+- ExpressJS
+- PostgreSQL
+- REST
+- JWT Authentication
+
+#### Dependencies
+
+- bcryptjs: ^2.4.3
+- cors: ^2.8.5
+- cross-env: ^7.0.0
+- dotenv: ^8.2.0
+- express: ^4.17.1
+- express-session: ^1.17.0
+- helmet: ^3.21.2
+- jsonwebtoken: ^8.5.1
+- knex: ^0.20.10
+- knex-cleaner: ^1.3.0
+- morgan: ^1.9.1
+- pg: ^7.18.1
+
+#### Development Dependencies
+
+- jest: ^25.1.0
+- nodemon: ^2.0.2
+- supertest: ^4.0.2
+
+### Testing
+
+#### Jest and Supertest
+
+Why?
+
+- Uses Jest as the testing framework for Node
+- Allows the testing of API routes
+- Focus on simplicity
+- Minimal configuration
+
+# Installation Instructions
+
+Make sure you have [PostgreSQL](https://www.postgresql.org/) and [pgAdmin4](https://www.pgadmin.org/) installed on your computer.
+
+```sh
+git clone https://github.com/Lambda-School-Labs/juxta-city-data-be.git
+cd juxta-city-data-be
+npm install
+npm run start
+```
+
+## Other Scripts
+
+    * server    - runs the app in development mode using nodemon
+    * start     - runs the app in development mode using node
+    * test      - runs the test watcher in an interactive mode
+    * coverage  - generates a test coverage report
+    * mlt       - runs knex migrate latest in testing enviroment
+    * mrt       - runs knex migrate rollback in testing enviroment
+    * ml        - runs knex migrate latest
+    * mr        - runs knex migrate rollback
+    * srt       - runs knex seed run in testing enviroment
+    * sr        - runs knex seed run
+
+## Endpoints
+
+#### Server Test Route
+
+| Method | Endpoint | Access Control | Description                                            |
+| ------ | -------- | -------------- | ------------------------------------------------------ |
+| GET    | `/`      | all users      | Returns server is running confimation of `Hello City`. |
+
+#### Authentication Routes
+
+| Method | Endpoint           | Access Control | Description                |
+| ------ | ------------------ | -------------- | -------------------------- |
+| POST   | `/api/auth/signup` | all users      | Create a new user sign up. |
+| POST   | `/api/auth/signin` | all users      | Current user sign in.      |
 
 #### User Routes
 
-| Method | Endpoint                | Access Control      | Description                                        |
-| ------ | ----------------------- | ------------------- | -------------------------------------------------- |
-| GET    | `/users/current`        | all users           | Returns info for the logged in user.               |
-| GET    | `/users/org/:userId`    | owners, supervisors | Returns all users for an organization.             |
-| GET    | `/users/:userId`        | owners, supervisors | Returns info for a single user.                    |
-| POST   | `/users/register/owner` | none                | Creates a new user as owner of a new organization. |
-| PUT    | `/users/:userId`        | owners, supervisors |                                                    |
-| DELETE | `/users/:userId`        | owners, supervisors |                                                    |
+| Method | Endpoint         | Access Control   | Description                          |
+| ------ | ---------------- | ---------------- | ------------------------------------ |
+| GET    | `/api/users/`    | registered users | Returns info for the logged in user. |
+| GET    | `/api/users/:id` | registered users | Returns individual user              |
+| PUT    | `/api/users/:id` | registered users | Updates individual user              |
+| DELETE | `/api/users/:id` | registered users | Delete individual user               |
+
+#### Favorite Routes
+
+| Method | Endpoint                           | Access Control   | Description                                 |
+| ------ | ---------------------------------- | ---------------- | ------------------------------------------- |
+| GET    | `/api/users/:id/favorites`         | registered users | Returns favorites for an individual user.   |
+| POST   | `/api/users/:id/favorites`         | registered users | Creates a favorites for an individual user. |
+| DELETE | `/api/users/:id/favorites/:cityId` | registered users | Deletes favorites for individual user.      |
+
+# Authentication JSON
+
+#### Register Examples (required fields only)
+
+---
+
+```
+{
+  "username": "ronmac",
+  "email": "ron@arches.com",
+  "password": "happymeal",
+  "first_name": "ronald",
+  "last_name": "mcdonald",
+  "dob": "1963-03-28",
+
+}
+```
+
+#### Login (required)
+
+---
+
+```
+{
+  "username": "ronmac",
+  "password": "happymeal",
+}
+```
 
 # Data Model
 
-🚫This is just an example. Replace this with your data model
-
-#### 2️⃣ ORGANIZATIONS
+#### Users
 
 ---
 
 ```
 {
-  id: UUID
-  name: STRING
-  industry: STRING
-  paid: BOOLEAN
-  customer_id: STRING
-  subscription_id: STRING
+  id: INCREMENT
+  username: STRING,
+  password: STRING,
+  first_name: STRING,
+  last_name: STRING,
+  dob: DATE,
+  address: STRING,
+  city: STRING,
+  state: STING,
+  zip: INTEGER
 }
 ```
 
-#### USERS
+#### Favorites
 
 ---
 
 ```
 {
-  id: UUID
-  organization_id: UUID foreign key in ORGANIZATIONS table
-  first_name: STRING
-  last_name: STRING
-  role: STRING [ 'owner', 'supervisor', 'employee' ]
-  email: STRING
-  phone: STRING
-  cal_visit: BOOLEAN
-  emp_visit: BOOLEAN
-  emailpref: BOOLEAN
-  phonepref: BOOLEAN
+  user_id: INTEGER,
+  city_id: INTEGER
 }
 ```
 
-## 2️⃣ Actions
+## Actions
 
-🚫 This is an example, replace this with the actions that pertain to your backend
+`add(favorite)` -> Adds a new favorite to the user
 
-`getOrgs()` -> Returns all organizations
+`get(user_id)` -> Returns a single user by ID to retreive their favorites
 
-`getOrg(orgId)` -> Returns a single organization by ID
+`getAll()` -> Returns all favorites
 
-`addOrg(org)` -> Returns the created org
+`remove(user_id, city_id)` -> Returns the created org
 
-`updateOrg(orgId)` -> Update an organization by ID
+<hr>
 
-`deleteOrg(orgId)` -> Delete an organization by ID
-<br>
-<br>
-<br>
-`getUsers(orgId)` -> if no param all users
+`add()` -> Adds a new user
 
-`getUser(userId)` -> Returns a single user by user ID
+`getBy(filter)` -> Returns user based on filter
 
-`addUser(user object)` --> Creates a new user and returns that user. Also creates 7 availabilities defaulted to hours of operation for their organization.
+`getById(id)` -> Returns a single user by user ID
 
-`updateUser(userId, changes object)` -> Updates a single user by ID.
+`getAll()` -> Returns all users
 
-`deleteUser(userId)` -> deletes everything dependent on the user
+`update(user, id)` -> Updates the user
 
-## 3️⃣ Environment Variables
-
-In order for the app to function correctly, the user must set up their own environment variables.
-
-create a .env file that includes the following:
-
-🚫 These are just examples, replace them with the specifics for your app
-  
- _ STAGING_DB - optional development db for using functionality not available in SQLite
-_ NODE_ENV - set to "development" until ready for "production"
-_ JWT_SECRET - you can generate this by using a python shell and running import random''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&amp;_(-_=+)') for i in range(50)])
-_ SENDGRID_API_KEY - this is generated in your Sendgrid account \* stripe_secret - this is generated in the Stripe dashboard
+`remove(id)` -> deletes everything dependent on the user
 
 ## Contributing
 
@@ -168,5 +267,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## Documentation
 
-See [Frontend Documentation](🚫link to your frontend readme here) for details on the fronend of our project.
-🚫 Add DS iOS and/or Andriod links here if applicable.
+See [Findur.City Frontend Documentation](https://github.com/Lambda-School-Labs/juxta-city-data-fe) for details on the frontend of our project.
