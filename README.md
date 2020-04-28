@@ -143,7 +143,7 @@ npm run start
 | POST   | `/api/users/:id/favorites`         | registered users | Creates a favorites for an individual user. |
 | DELETE | `/api/users/:id/favorites/:cityId` | registered users | Deletes favorites for individual user.      |
 
-# AUTHENTICATION JSON
+# Authentication JSON
 
 #### Register Examples (required fields only)
 
@@ -174,7 +174,7 @@ npm run start
 
 # Data Model
 
-#### USERS
+#### Users
 
 ---
 
@@ -193,7 +193,7 @@ npm run start
 }
 ```
 
-#### FAVORITES
+#### Favorites
 
 ---
 
