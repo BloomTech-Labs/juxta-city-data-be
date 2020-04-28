@@ -14,7 +14,6 @@ You can find the deployed project at [https://www.findur.city](https://www.findu
 <br>
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
-![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ![Code Coverage](https://api.codeclimate.com/v1/badges/d3f9ebd125b9496789a3/maintainability)
 ![Test Coverage](https://api.codeclimate.com/v1/badges/d3f9ebd125b9496789a3/test_coverage)
@@ -125,7 +124,7 @@ npm run start
 
 # AUTHENTICATION JSON
 
-#### Register (required)
+#### Register Examples (required fields only)
 
 ---
 
@@ -141,7 +140,7 @@ npm run start
 }
 ```
 
-#### Login
+#### Login (required)
 
 ---
 
@@ -194,7 +193,6 @@ npm run start
 
 `remove(user_id, city_id)` -> Returns the created org
 
-<br>
 <br>
 <br>
 
