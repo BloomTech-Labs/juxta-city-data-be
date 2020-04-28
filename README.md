@@ -1,23 +1,54 @@
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your portfolio. This is intended to be a guideline. Feel free to add your own flare to it.
+# Find Ur City
 
-🚫 The numbers 1️⃣ through 3️⃣ next to each item represent the week that part of the docs needs to be comepleted by. Make sure to delete the numbers by the end of Labs.
+You can find the deployed project at [https://www.findur.city](https://www.findur.city)
 
-🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
+## Contributors
 
-# API Documentation
+|                                       [Alfonso Ruiz](https://github.com/alfonsoruiz)                                       |                                          [Jack Kim](https://github.com/jackskim)                                          |                                        [Logan Karnes](https://github.com/lkarnes)                                         |                                         [Zac Smith](https://github.com/mrzacsmith)                                          |
+| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
+|                   [<img src="./src/assets/alfonso.png" width = "200" />](https://github.com/alfonsoruiz)                   |                     [<img src="./src/assets/jack.jpeg" width = "200" />](https://github.com/jackskim)                     |                     [<img src="./src/assets/logan.png" width = "200" />](https://github.com/lkarnes)                      |                     [<img src="./src/assets/zac.jpeg" width = "200" />](https://github.com/mrzacsmith)                      |
+|                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/alfonsoruiz)                  |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/jackskim)                   |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/lkarnes)                    |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/mrzacsmith)                   |
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/mralfonsoruiz) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jackskim/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/logan-karnes) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/mrzacsmith/) |
 
-#### 1️⃣ Backend delpoyed at [Finidur.city](https://production-juxta-city-be.herokuapp.com/) <br>
+<br>
+<br>
 
-## 1️⃣ Getting started
+![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
+![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![Code Coverage](https://api.codeclimate.com/v1/badges/981e0174c4f6059b773c/maintainability)
+![Test Coverage](https://api.codeclimate.com/v1/badges/981e0174c4f6059b773c/test_coverage)
 
-To get the server running locally:
+## Project Overview
 
-🚫 adjust these scripts to match your project
+[Trello Board](https://trello.com/b/R2QOaAEe/labspt7-juxta-city-data)
 
-- Clone this repo
-- **yarn install** to install all required dependencies
-- **yarn server** to start the local server
-- **yarn test** to start server using testing environment
+[Product Canvas](https://www.notion.so/Juxta-City-Data-06550a97dd9b41f1aea4b4b6de46ecb5)
+
+[UX Design files](https://www.figma.com/file/YS5Ykd25k90FbD7UkDq2fa/Juxta-City-Data-Ryan-and-Stephen?node-id=769%3A23)
+
+Find Ur City provides city data about important factors in deciding where to live, such as:
+
+- Population
+- Average resident age
+- Climate
+- Median household income
+- Cost of living
+- Average Commute time
+- and much more!
+
+Find Ur City presents this important data in an intuitive and easy to understand interface.
+
+### Key Features
+
+- Ability to search for a city located in the US
+- Customized 'Recommended Cities' list based on user's survey selections
+- View detailed information about individual cities
+- Ability to save your Favorite cities
+
+## Tech Stack
+
+---
 
 ### Backend framework goes here
 
@@ -123,11 +154,12 @@ In order for the app to function correctly, the user must set up their own envir
 create a .env file that includes the following:
 
 🚫 These are just examples, replace them with the specifics for your app
-  
- _ STAGING_DB - optional development db for using functionality not available in SQLite
-_ NODE_ENV - set to "development" until ready for "production"
-_ JWT_SECRET - you can generate this by using a python shell and running import random''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&amp;_(-_=+)') for i in range(50)])
-_ SENDGRID_API_KEY - this is generated in your Sendgrid account \* stripe_secret - this is generated in the Stripe dashboard
+
+_ STAGING_DB - optional development db for using functionality not available in SQLite
+_ NODE\*ENV - set to "development" until ready for "production"
+
+- JWT*SECRET - you can generate this by using a python shell and running import random''.join([random.SystemRandom().choice('abcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&amp;*(-_=+)') for i in range(50)])
+  _ SENDGRID_API_KEY - this is generated in your Sendgrid account \* stripe_secret - this is generated in the Stripe dashboard
 
 ## Contributing
 
