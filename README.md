@@ -76,7 +76,7 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 - nodemon: ^2.0.2
 - supertest: ^4.0.2
 
-# Testing
+### Testing
 
 #### Jest and Supertest
 
@@ -214,8 +214,7 @@ npm run start
 
 `remove(user_id, city_id)` -> Returns the created org
 
-<br>
-<br>
+<hr>
 
 `add()` -> Adds a new user
 
