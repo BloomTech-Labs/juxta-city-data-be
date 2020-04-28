@@ -15,7 +15,7 @@
     "srt": "npx knex seed:run --env=testing",
     "sr": "npx knex seed:run"
   },
-	"jest": {
+  "jest": {
     "testEnvironment": "node",
     "collectCoverageFrom": [
       "**/*.js",
