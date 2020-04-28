@@ -16,8 +16,8 @@ You can find the deployed project at [https://www.findur.city](https://www.findu
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-![Code Coverage](https://api.codeclimate.com/v1/badges/981e0174c4f6059b773c/maintainability)
-![Test Coverage](https://api.codeclimate.com/v1/badges/981e0174c4f6059b773c/test_coverage)
+![Code Coverage](https://api.codeclimate.com/v1/badges/d3f9ebd125b9496789a3/maintainability)
+![Test Coverage](https://api.codeclimate.com/v1/badges/d3f9ebd125b9496789a3/test_coverage)
 
 ## Project Overview
 
@@ -82,22 +82,36 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 | POST   | `/api/users/:id/favorites`         | none                | Creates a new user as owner of a new organization. |
 | DELETE | `/api/users/:id/favorites/:cityId` | users               | Deletes                                            |
 
-# Data Model
+# AUTHENTICATION JSON
 
-#### 2️⃣ AUTHENTICATION
+#### Register (required)
 
 ---
 
 ```
 {
-  id: UUID
-  name: STRING
-  industry: STRING
-  paid: BOOLEAN
-  customer_id: STRING
-  subscription_id: STRING
+  "username": "ronmac",
+  "email": "ron@arches.com",
+  "password": "happymeal",
+  "first_name": "ronald",
+  "last_name": "mcdonald",
+  "dob": "1963-03-28",
+
 }
 ```
+
+#### Login
+
+---
+
+```
+{
+  "username": "ronmac",
+  "password": "happymeal",
+}
+```
+
+# Data Model
 
 #### USERS
 
@@ -105,16 +119,16 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 
 ```
 {
-  id: auto-increment
-  username: "ronmac",
-  password: "happymeal",
-  first_name: "Ronald",
-  last_name: "mcdonald",
-  dob: "1963-03-28",
-  address: "876 w 16th St",
-  city: "New York",
-  state: "New York",
-  zip: 92312
+  id: INCREMENT
+  username: STRING,
+  password: STRING,
+  first_name: STRING,
+  last_name: STRING,
+  dob: DATE,
+  address: STRING,
+  city: STRING,
+  state: STING,
+  zip: INTEGER
 }
 ```
 
@@ -124,30 +138,30 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 
 ```
 {
-  user_id: 1,
-  city_id: 1028
+  user_id: INTEGER,
+  city_id: INTEGER
 }
 ```
 
 ## 2️⃣ Actions
 
-🚫 This is an example, replace this with the actions that pertain to your backend
+`add(favorite)` -> Adds a new favorite to the user
 
-`getOrgs()` -> Returns all organizations
+`get(user_id)` -> Returns a single user by ID to retreive their favorites
 
-`getOrg(orgId)` -> Returns a single organization by ID
+`remove(user_id, city_id)` -> Returns the created org
 
-`addOrg(org)` -> Returns the created org
-
-`updateOrg(orgId)` -> Update an organization by ID
-
-`deleteOrg(orgId)` -> Delete an organization by ID
 <br>
 <br>
 <br>
-`getUsers(orgId)` -> if no param all users
 
-`getUser(userId)` -> Returns a single user by user ID
+`add()` -> Adds a new user
+
+`find()` -> Returns all users
+
+`findBy(filter)` -> Returns user based on filter
+
+`findById(id)` -> Returns a single user by user ID
 
 `addUser(user object)` --> Creates a new user and returns that user. Also creates 7 availabilities defaulted to hours of operation for their organization.
 
