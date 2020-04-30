@@ -2,8 +2,6 @@
 
 // const Users  = require('./users-model.js')
 
-// describe('users model', () => {
-//     describe('insert()',  () => {
-//         it('should add')
-//     })
+// it('is running with with the correct db', () => {
+//  expect(proess.env.)
 // })
