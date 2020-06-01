@@ -5,9 +5,9 @@ exports.up = function (knex) {
       user.string("username", 255).notNullable().unique();
       user.string("email", 255).notNullable().unique();
       user.string("password", 255).notNullable();
-      user.string("first_name", 255);
-      user.string("last_name", 255);
-      user.date("dob");
+      user.string("first_name", 255).notNullable();
+      user.string("last_name", 255).notNullable();
+      user.date("dob").notNullable();
       user.string("address", 255);
       user.string("city", 255);
       user.string("state", 255);
