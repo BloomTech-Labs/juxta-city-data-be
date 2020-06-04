@@ -12,7 +12,7 @@ exports.up = function (knex) {
       user.string("city", 255);
       user.string("state", 255);
       user.integer("zip", 62);
-      user.string("image", 255);
+      user.string("image", 255); // string is for the unique URL
       user.string("cloudinary_public_id", 255);
      
     })
