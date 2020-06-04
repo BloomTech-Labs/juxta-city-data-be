@@ -6,7 +6,7 @@ module.exports = {
     client: "postgresql",
     connection: {
       host: "127.0.0.1",
-      database: "findur-db",
+      database: "findurdb",
       user: "postgres",
       password: process.env.PASSWORD,
     },
