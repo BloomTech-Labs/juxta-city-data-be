@@ -12,6 +12,9 @@ exports.up = function (knex) {
       user.string("city", 255);
       user.string("state", 255);
       user.integer("zip", 62);
+      user.string("image", 255);
+      user.string("cloudinary_public_id", 255);
+     
     })
     .createTable("favorites", (favorite) => {
       favorite.increments('id');
