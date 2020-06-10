@@ -20,6 +20,25 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  const { id } = req.params;
+
+  let profile = req.body;
+
+  try {
+    const updatedProfile = await Profile.update(profile, id);
+
+    if (!updatedProfile) {
+      res.status(404).json({ msg: 'Profile could not be found' });
+    }
+
+    res.status(200).json({ msg: 'Profile successfully updated!' });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('You failed');
+  }
+});
+
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
 
