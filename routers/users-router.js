@@ -1,21 +1,21 @@
-const bcrypt = require("bcryptjs");
-const router = require("express").Router();
-const Users = require("../models/users-model.js");
-const Favorites = require("../models/favorites-model.js");
+const bcrypt = require('bcryptjs');
+const router = require('express').Router();
+const Users = require('../models/users-model.js');
+const Favorites = require('../models/favorites-model.js');
 
-router.get("/", async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const users = await Users.getAll();
 
     !users
-      ? next({ message: "Error retrieving the users" })
+      ? next({ message: 'Error retrieving the users' })
       : res.status(200).json(users);
   } catch (error) {
     next(error);
   }
 });
 
-router.get("/:id", async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -24,7 +24,7 @@ router.get("/:id", async (req, res, next) => {
     !user
       ? next({
           status: 404,
-          message: "Error retrieving the user",
+          message: 'Error retrieving the user'
         })
       : res.status(200).json(user);
   } catch (error) {
@@ -32,7 +32,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.put("/:id", async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
   const { id } = req.params;
   let user = req.body;
   const hash = bcrypt.hashSync(user.password, 12);
@@ -44,7 +44,7 @@ router.put("/:id", async (req, res, next) => {
     !updatedUser
       ? next({
           status: 404,
-          message: "Error updating the user",
+          message: 'Error updating the user'
         })
       : res.status(200).json(updatedUser);
   } catch (error) {
@@ -52,25 +52,8 @@ router.put("/:id", async (req, res, next) => {
   }
 });
 
-router.delete("/:id", async (req, res, next) => {
-  const { id } = req.params;
-
-  try {
-    const result = await Users.remove(id);
-
-    result !== 1
-      ? next({
-          status: 404,
-          message: "Error deleting the user",
-        })
-      : res.status(200).json({ message: "User successfully deleted" });
-  } catch (error) {
-    next(error);
-  }
-});
-
 // user favorites endpoints
-router.get("/:id/favorites", async (req, res, next) => {
+router.get('/:id/favorites', async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -79,7 +62,7 @@ router.get("/:id/favorites", async (req, res, next) => {
     !userFavorites
       ? next({
           status: 404,
-          message: "Error retrieving user favorites",
+          message: 'Error retrieving user favorites'
         })
       : res.status(200).json(userFavorites);
   } catch (error) {
@@ -87,7 +70,7 @@ router.get("/:id/favorites", async (req, res, next) => {
   }
 });
 
-router.post("/:id/favorites", async (req, res, next) => {
+router.post('/:id/favorites', async (req, res, next) => {
   const { id } = req.params;
 
   let userFavorite = req.body;
@@ -99,7 +82,7 @@ router.post("/:id/favorites", async (req, res, next) => {
     !result
       ? next({
           status: 404,
-          message: "Error adding user favorite",
+          message: 'Error adding user favorite'
         })
       : res.status(201).json(result);
   } catch (error) {
@@ -107,7 +90,7 @@ router.post("/:id/favorites", async (req, res, next) => {
   }
 });
 
-router.delete("/:id/favorites/:cityId", async (req, res, next) => {
+router.delete('/:id/favorites/:cityId', async (req, res, next) => {
   const { id } = req.params;
   const { cityId } = req.params;
 
@@ -117,9 +100,9 @@ router.delete("/:id/favorites/:cityId", async (req, res, next) => {
     result !== 1
       ? next({
           status: 404,
-          message: "Error deleting the favorite city",
+          message: 'Error deleting the favorite city'
         })
-      : res.status(200).json({ message: "Favorite city succesfully deleted" });
+      : res.status(200).json({ message: 'Favorite city succesfully deleted' });
   } catch (error) {
     next(error);
   }

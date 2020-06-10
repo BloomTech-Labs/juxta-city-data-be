@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 const Profile = require('../models/profile-model');
+const Users = require('../models/users-model');
 
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
@@ -16,6 +17,25 @@ router.get('/:id', async (req, res) => {
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const profile = await Profile.remove(id);
+
+    const user = await Users.remove(id);
+
+    if (!profile && !user) {
+      res.status(404).json({ msg: 'User or Profile not found' });
+    }
+
+    res.status(200).json({ msg: 'Profile and User deleted' });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json('Server Error');
   }
 });
 
