@@ -1,5 +1,5 @@
 require("dotenv").config();
-const dbConnection = process.env.DATA_BASE_URL;
+const dbConnection = process.env.DATABASE_URL;
 
 module.exports = {
   development: {
@@ -36,7 +36,7 @@ module.exports = {
 
   staging: {
     client: "pg",
-    connection: process.env.DATA_BASE_URL,
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10,
@@ -51,7 +51,7 @@ module.exports = {
 
   production: {
     client: "pg",
-    connection: process.env.DATA_BASE_URL,
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10,
