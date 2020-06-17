@@ -1,5 +1,13 @@
 const router = require('express').Router();
+const cloudinary = require('cloudinary').v2;
 const Profile = require('../models/profile-model.js');
+const { removeDir } = require('../removeTmpDir');
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
+});
 
 router.get('/test', (req, res) => {
   res.send('Profile is building');
@@ -9,13 +17,13 @@ router.get('/test', (req, res) => {
 // http://localhost:5000/api/profile/
 router.get('/', (req, res) => {
   Profile.get()
-    .then(profiles => {
+    .then((profiles) => {
       res.status(200).json(profiles);
     })
-    .catch(error => {
+    .catch((error) => {
       res.status(500).json({
         message: 'Error retrieving the profiles',
-        error,
+        error
       });
     });
 });
@@ -23,13 +31,13 @@ router.get('/', (req, res) => {
 //GETs all the profiles and registration info (users table + profile table)
 router.get('/all', (req, res) => {
   Profile.getAll()
-    .then(profiles => {
+    .then((profiles) => {
       res.status(200).json(profiles);
     })
-    .catch(error => {
+    .catch((error) => {
       res.status(500).json({
         message: 'Error retrieving the profiles',
-        error,
+        error
       });
     });
 });
@@ -38,7 +46,7 @@ router.get('/all', (req, res) => {
 router.get('/:id/user', (req, res) => {
   const id = req.params.id;
   Profile.find(id)
-    .then(response => {
+    .then((response) => {
       if (response.length > 0) {
         res.status(200).json(response);
       } else {
@@ -47,11 +55,11 @@ router.get('/:id/user', (req, res) => {
           .json({ message: 'User with the specifid id cannot be found!' });
       }
     })
-    .catch(err =>
+    .catch((err) =>
       res.status(500).json({
         error:
           'There was an error while retriving the user from to the database',
-        err,
+        err
       })
     );
 });
@@ -61,20 +69,20 @@ router.get('/:id', (req, res) => {
   const id = req.params.id;
 
   Profile.findProfiles(id)
-    .then(response => {
+    .then((response) => {
       if (response.length > 0) {
         res.status(200).json(response);
       } else {
         res.status(404).json({
-          message: 'Profile with the specifid user_id cannot be found!',
+          message: 'Profile with the specifid user_id cannot be found!'
         });
       }
     })
-    .catch(err =>
+    .catch((err) =>
       res.status(500).json({
         error:
           'There was an error while retriving the user from to the database',
-        err,
+        err
       })
     );
 });
@@ -84,19 +92,19 @@ router.get('/:id/all', (req, res) => {
   const id = req.params.id;
 
   Profile.getProfileByUserId(id)
-    .then(response => {
+    .then((response) => {
       if (response.length > 0) {
         res.status(200).json(response);
       } else {
         res.status(404).json({
-          message: 'Profile with the specifid user_id cannot be found!',
+          message: 'Profile with the specifid user_id cannot be found!'
         });
       }
     })
-    .catch(err =>
+    .catch((err) =>
       res.status(500).json({
         error:
-          'There was an error while retriving the users info from to the database!',
+          'There was an error while retriving the users info from to the database!'
       })
     );
 });
@@ -109,11 +117,11 @@ router.post('/:id', (req, res) => {
   // console.log(req.params, 'params');
   // console.log(req.body, 'BODY');
 
-  Profile.findProfiles(id).then(profiles => {
+  Profile.findProfiles(id).then((profiles) => {
     //console.log(profiles, 'Returns the profiles with the specified id if exists');
     if (profiles.length <= 0) {
       Profile.find(id)
-        .then(response => {
+        .then((response) => {
           //console.log(response.length, 'Find user by id RESPONSE');
           if (response.length > 0) {
             Profile.insertProfileInfo({ ...body, user_id: id }).then(() =>
@@ -128,12 +136,12 @@ router.post('/:id', (req, res) => {
         .catch(() =>
           res.status(500).json({
             message:
-              'There was an error while saving the profile to the database!',
+              'There was an error while saving the profile to the database!'
           })
         );
     } else {
       res.status(500).json({
-        message: `A profile for ${profiles[0].first_name} already exists!`,
+        message: `A profile for ${profiles[0].first_name} already exists!`
       });
       console.log(`A profile for ${profiles[0].first_name} already exists!`);
     }
@@ -166,22 +174,22 @@ router.put('/:id', (req, res) => {
   const id = req.params.id;
   const body = req.body;
 
-  Profile.findProfile(id).then(profile => {
+  Profile.findProfile(id).then((profile) => {
     //console.log(profiles, 'Returns the profiles with the specified id if exists');
     if (profile) {
       Profile.updateProfileInfo(id, body)
-        .then(updatedProfile => {
+        .then((updatedProfile) => {
           res.status(200).json({
             message: 'success uptating the profile',
             info: body,
-            updatedProfile,
+            updatedProfile
           });
         })
-        .catch(err => {
+        .catch((err) => {
           res.status(500).json({
             error:
               'There was an error while saving the profile to the database!',
-            err,
+            err
           });
         });
     } else {
@@ -197,16 +205,16 @@ router.delete('/:id', (req, res) => {
   const id = req.params.id;
 
   Profile.deleteProfile(id)
-    .then(profile => {
+    .then((profile) => {
       if (profile > 0) {
         res.status(200).json({ message: 'The profile has been deleted' });
       } else {
         res.status(404).json({
-          message: 'The profile with the specified id could not be found!',
+          message: 'The profile with the specified id could not be found!'
         });
       }
     })
-    .catch(error => {
+    .catch((error) => {
       res.status(500).json({ message: 'Error removing the profile', error });
     });
 });
@@ -222,26 +230,53 @@ router.put('/:id/answers', async (req, res) => {
   // console.log(body, 'the put body');
 
   Profile.findProfile(id)
-    .then(response => {
+    .then((response) => {
       // console.log(response, 'response');
-      Profile.addAnswersJson(body, id).then(profile => {
+      Profile.addAnswersJson(body, id).then((profile) => {
         // console.log(profile, 'profile response');
         if (profile) {
           res.status(200).json({ success: true, profile });
         } else {
           res.status(404).json({
-            message: 'The profile with the specified ID does not exist.',
+            message: 'The profile with the specified ID does not exist.'
           });
         }
       });
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).json({
         errorMessage: 'The user information could not be modified.',
-        err,
+        err
       });
     });
 });
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+router.put('/:id/profile_image', (req, res) => {
+  const file = req.files.image;
+  const { id } = req.params;
+
+  cloudinary.uploader.upload(
+    file.tempFilePath,
+    (options = { public_id: req.params.cloudinary_id }),
+    function (err, results) {
+      removeDir();
+      Profile.addImage(
+        {
+          ...req.body,
+          image_url: results.url,
+          cloudinary_id: results.public_id
+        },
+        id
+      )
+        .then((profile) => {
+          res.status(200).json(profile);
+        })
+        .catch((err) => {
+          res.status(500).json({ message: 'The image could not be uploaded' });
+        });
+    }
+  );
+});
 
 module.exports = router;
