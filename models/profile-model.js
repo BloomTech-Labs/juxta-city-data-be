@@ -51,6 +51,12 @@ function addImage(image, id) {
   return db('profile').where('user_id', id).update(image);
 }
 
+function deleteImage(id) {
+  return db('profile')
+    .where({ cloudinary_id: id })
+    .update({ image_url: null, cloudinary_id: null });
+}
+
 function findProfile(id) {
   return db('profile').where({ user_id: id }).first();
 }
@@ -66,5 +72,6 @@ module.exports = {
   addAnswersJson,
   addImage,
   updateProfileInfo,
-  deleteProfile
+  deleteProfile,
+  deleteImage
 };

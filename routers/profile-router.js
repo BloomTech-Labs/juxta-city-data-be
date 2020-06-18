@@ -259,7 +259,7 @@ router.put('/:id/profile_image', (req, res) => {
   cloudinary.uploader.upload(
     file.tempFilePath,
     (options = { public_id: req.params.cloudinary_id }),
-    function (err, results) {
+    function (results) {
       removeDir();
       Profile.addImage(
         {
@@ -273,10 +273,39 @@ router.put('/:id/profile_image', (req, res) => {
           res.status(200).json(profile);
         })
         .catch((err) => {
-          res.status(500).json({ message: 'The image could not be uploaded' });
+          res
+            .status(500)
+            .json({ message: 'The image could not be uploaded', err });
         });
     }
   );
+});
+
+router.put('/:id/profile_image/:cloudinary_id', (req, res) => {
+  const { cloudinary_id } = req.params;
+
+  cloudinary.uploader
+    .destroy(cloudinary_id)
+    .then(() => {
+      Profile.deleteImage(cloudinary_id)
+        .then((image) => {
+          if (image) {
+            res.status(200).json({ message: 'The image has been removed' });
+          } else {
+            res.status(404).json({
+              message: 'Could not find an image with the given public id'
+            });
+          }
+        })
+        .catch((err) => {
+          res.status(500).json({ message: 'Failed to remove image', err });
+        });
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .json({ message: 'Failed to remove image from cloudinary', err });
+    });
 });
 
 module.exports = router;
