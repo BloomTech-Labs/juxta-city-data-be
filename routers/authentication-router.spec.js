@@ -4,7 +4,8 @@ const server = require("../server.js");
 
 const newUser = {
   username: "test" + Date.now(),
-  password: "test123",
+  email: "test@email.com",
+  password: "test123"
 };
 
 describe("api test", () => {
@@ -18,7 +19,7 @@ describe("auth-router.js", () => {
     await db.raw("truncate users, users restart identity cascade");
   });
 
-  describe("the /api endpoints", async () => {
+  describe("the /api endpoints", () => {
     it("should return a 404 status code", async () => {
       const response = await request(server).get("/api/auth/");
       expect(response.status).toEqual(404);
