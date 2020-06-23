@@ -259,7 +259,7 @@ router.put('/:id/profile_image', (req, res) => {
   cloudinary.uploader.upload(
     file.tempFilePath,
     (options = { public_id: req.params.cloudinary_id }),
-    function (results) {
+    function (error, results) {
       removeDir();
       Profile.addImage(
         {
