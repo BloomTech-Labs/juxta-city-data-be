@@ -72,10 +72,12 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 #### Dependencies
 
 - bcryptjs: ^2.4.3
+- cloudinary: ^1.22.0
 - cors: ^2.8.5
 - cross-env: ^7.0.0
 - dotenv: ^8.2.0
 - express: ^4.17.1
+- express-fileupload: ^1.1.7-alpha.3
 - express-session: ^1.17.0
 - helmet: ^3.21.2
 - jsonwebtoken: ^8.5.1
@@ -168,10 +170,6 @@ npm run start
   "username": "ronmac",
   "email": "ron@arches.com",
   "password": "happymeal",
-  "first_name": "ronald",
-  "last_name": "mcdonald",
-  "dob": "1963-03-28",
-
 }
 ```
 
@@ -197,13 +195,28 @@ npm run start
   id: INCREMENT
   username: STRING,
   password: STRING,
+  email:STRING,
+}
+```
+
+#### Profile
+
+---
+
+```
+{
+  id: INCREMENT,
   first_name: STRING,
   last_name: STRING,
   dob: DATE,
   address: STRING,
   city: STRING,
-  state: STING,
-  zip: INTEGER
+  state: STRING,
+  zip: INTEGER,
+  user_id:INTEGER,
+  surveyinfo:JSON,
+  image_url: STRING,
+  cloudinary_id: STRING,
 }
 ```
 
@@ -213,8 +226,35 @@ npm run start
 
 ```
 {
+  id: INCREMENT,
   user_id: INTEGER,
   city_id: INTEGER
+}
+```
+
+#### Questions
+
+---
+
+```
+{
+  id: INCREMENT,
+  question: STRING,
+  name: STRING
+}
+
+```
+
+#### Options
+
+---
+
+```
+{
+  id: INCREMENT,
+  description: STRING,
+  value: STRING,
+  question_id:INTEGER,
 }
 ```
 
