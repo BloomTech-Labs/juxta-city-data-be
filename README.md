@@ -159,6 +159,28 @@ npm run start
 | POST   | `/api/users/:id/favorites`         | registered users | Creates a favorites for an individual user. |
 | DELETE | `/api/users/:id/favorites/:cityId` | registered users | Deletes favorites for individual user.      |
 
+#### Profiles
+
+| Method | Endpoint                                        | Access Control   | Description                                                   |
+| ------ | ----------------------------------------------- | ---------------- | ------------------------------------------------------------- |
+| GET    | `/api/profile/`                                 | registered users | Returns profile info for all the users that created a profile |
+| GET    | `/api/profile/all`                              | registered users | Returns all the profiles and registration info                |
+| GET    | `/api/profile/:id/`                             | registered users | Returns only the profile based on the user_id                 |
+| GET    | `/api/profile/:id/all`                          | registered users | Returns the profile and registration info based on the user_id|
+| POST   | `/api/profile/:id`                              | registered users | Inserts profile information based on a user id                |
+| PUT    | `/api/profile/:id`                              | registered users | Updates profile information based on a user id                |
+| DELETE | `/api/profile/:id`                              | registered users | Deletes profile information based on a user id                |
+| PUT    | `/api/profile/:id/profile_image`                | registered users | Uploads profile picture based on a user id                    |
+| PUT    | `/api/profile/:id/profile_image/:cloudinary_id` | registered users |Removes profile picture based on a user id                     |
+
+#### Survey Data
+
+| Method | Endpoint                   | Access Control | Description                                                         |
+| ------ | -------------------------- | -------------- | ------------------------------------------------------------------- |
+| GET    | `/api/questions/`          | all users      |Returns an array of question objects                                 |
+| GET    | `/api/questions/surveyobj` | all users      | Returns a big object containing all th equestions and their options |
+| GET    | `/api/questions/:id`       | all users      | Returns an individual question and its options  by the question id  |
+
 # Authentication JSON
 
 #### Register Examples (required fields only)
