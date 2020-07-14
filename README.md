@@ -259,28 +259,42 @@ npm run start
 ```
 
 ## Actions
-
-`add(favorite)` -> Adds a new favorite to the user
-
-`get(user_id)` -> Returns a single user by ID to retreive their favorites
-
-`getAll()` -> Returns all favorites
-
-`remove(user_id, city_id)` -> Returns the created org
-
+#### User
+```
+`add()` -> Adds a new user
+`getBy(filter)` -> Returns user based on filter
+`getById(id)` -> Returns a single user by user ID
+`getAll()` -> Returns all users
+`update(user, id)` -> Updates the user
+`remove(id)` -> Deletes everything dependent on the user
+```
 <hr>
 
-`add()` -> Adds a new user
+#### Profile
+```
+`getProfileByUserId(id)` -> Returns the user's profile information by user id
+`findProfiles(id)` -> Finds a profile by user id
+`insertProfileInfo({ ...body, id })` -> Adds profile information for a user
+`updateProfileInfo(id, body)` -> Updates profile information 
+`deleteProfile(id)` -> Deletes the profile information but not the user account
+`addImage(image, id)`-> Adds image to the profile
+`deleteImage(id)`-> Deletes image 
+```
+<hr>
 
-`getBy(filter)` -> Returns user based on filter
+#### Favorite cities
+```
+`add(favorite)` -> Adds a new favorite to the user
+`get(user_id)` -> Returns a single user by ID to retreive their favorites
+`getAll()` -> Returns all favorites
+`remove(user_id, city_id)` -> Returns the created org
+```
+<hr>
 
-`getById(id)` -> Returns a single user by user ID
-
-`getAll()` -> Returns all users
-
-`update(user, id)` -> Updates the user
-
-`remove(id)` -> deletes everything dependent on the user
+#### Survey Data
+```
+`getSurveyData()` -> returns an object with the survey questions and options
+```
 
 ## Contributing
 
