@@ -3,12 +3,24 @@
 You can find the deployed project at [https://www.findur.city](https://www.findur.city)
 
 ## Contributors
+### WEBPT7 Team
 
 |                                       [Alfonso Ruiz](https://github.com/alfonsoruiz)                                       |                                          [Jack Kim](https://github.com/jackskim)                                          |                                        [Logan Karnes](https://github.com/lkarnes)                                         |                                         [Zac Smith](https://github.com/mrzacsmith)                                          |
 | :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
-|                     [<img src="./assets/alfonso.png" width = "200" />](https://github.com/alfonsoruiz)                     |                       [<img src="./assets/jack.jpeg" width = "200" />](https://github.com/jackskim)                       |                       [<img src="./assets/logan.png" width = "200" />](https://github.com/lkarnes)                        |                       [<img src="./assets/zac.jpeg" width = "200" />](https://github.com/mrzacsmith)                        |
-|                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/alfonsoruiz)                  |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/jackskim)                   |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/lkarnes)                    |                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/mrzacsmith)                   |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/mralfonsoruiz) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/jackskim/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/logan-karnes) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/mrzacsmith/) |
+|                  [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/alfonsoruiz)                  |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/jackskim)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/lkarnes)                    |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/mrzacsmith)                   |
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/mralfonsoruiz) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/jackskim/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/logan-karnes) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/mrzacsmith/) |
+
+
+### WEBPT11 Team
+|                                       [Ana Tulea](https://github.com/anatulea)                                             |                                          [Conary Beckford](https://github.com/Conary36)                                   |                                        [Sean Birmingham](https://github.com/sean-birmingham)                              |                                         [Kelly Moreira](https://github.com/misskellymore)                                   |
+| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | 
+|                  [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/anatulea)                     |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/Conary36)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/sean-birmingham)            |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/misskellymore)                |
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/anatulea/)  | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/)             | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/sean-birmingham/)|[ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/kemore/)| 
+
+|                                       [Brian Leonard](https://github.com/Akaleonard)                                       |                                          [Benjamin Quackenbush](https://github.com/Quack117)                                          |                                        [Shanda Woods](https://github.com/ShandaWoods)                         |    
+| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
+|                  [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/Akaleonard)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/Quack117)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/ShandaWoods)                |                  
+| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/)              | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/)             | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/shanda-woods/)|
 
 <br>
 <br>
@@ -58,10 +70,12 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 #### Dependencies
 
 - bcryptjs: ^2.4.3
+- cloudinary: ^1.22.0
 - cors: ^2.8.5
 - cross-env: ^7.0.0
 - dotenv: ^8.2.0
 - express: ^4.17.1
+- express-fileupload: ^1.1.7-alpha.3
 - express-session: ^1.17.0
 - helmet: ^3.21.2
 - jsonwebtoken: ^8.5.1
@@ -143,6 +157,28 @@ npm run start
 | POST   | `/api/users/:id/favorites`         | registered users | Creates a favorites for an individual user. |
 | DELETE | `/api/users/:id/favorites/:cityId` | registered users | Deletes favorites for individual user.      |
 
+#### Profiles
+
+| Method | Endpoint                                        | Access Control   | Description                                                   |
+| ------ | ----------------------------------------------- | ---------------- | ------------------------------------------------------------- |
+| GET    | `/api/profile/`                                 | registered users | Returns profile info for all the users that created a profile |
+| GET    | `/api/profile/all`                              | registered users | Returns all the profiles and registration info                |
+| GET    | `/api/profile/:id/`                             | registered users | Returns only the profile based on the user_id                 |
+| GET    | `/api/profile/:id/all`                          | registered users | Returns the profile and registration info based on the user_id|
+| POST   | `/api/profile/:id`                              | registered users | Inserts profile information based on a user id                |
+| PUT    | `/api/profile/:id`                              | registered users | Updates profile information based on a user id                |
+| DELETE | `/api/profile/:id`                              | registered users | Deletes profile information based on a user id                |
+| PUT    | `/api/profile/:id/profile_image`                | registered users | Uploads profile picture based on a user id                    |
+| PUT    | `/api/profile/:id/profile_image/:cloudinary_id` | registered users |Removes profile picture based on a user id                     |
+
+#### Survey Data
+
+| Method | Endpoint                   | Access Control | Description                                                         |
+| ------ | -------------------------- | -------------- | ------------------------------------------------------------------- |
+| GET    | `/api/questions/`          | all users      |Returns an array of question objects                                 |
+| GET    | `/api/questions/surveyobj` | all users      | Returns a big object containing all th equestions and their options |
+| GET    | `/api/questions/:id`       | all users      | Returns an individual question and its options  by the question id  |
+
 # Authentication JSON
 
 #### Register Examples (required fields only)
@@ -154,10 +190,6 @@ npm run start
   "username": "ronmac",
   "email": "ron@arches.com",
   "password": "happymeal",
-  "first_name": "ronald",
-  "last_name": "mcdonald",
-  "dob": "1963-03-28",
-
 }
 ```
 
@@ -174,7 +206,7 @@ npm run start
 
 # Data Model
 
-#### Users
+#### User
 
 ---
 
@@ -183,13 +215,28 @@ npm run start
   id: INCREMENT
   username: STRING,
   password: STRING,
+  email:STRING,
+}
+```
+
+#### Profile
+
+---
+
+```
+{
+  id: INCREMENT,
   first_name: STRING,
   last_name: STRING,
   dob: DATE,
   address: STRING,
   city: STRING,
-  state: STING,
-  zip: INTEGER
+  state: STRING,
+  zip: INTEGER,
+  user_id:INTEGER,
+  surveyinfo:JSON,
+  image_url: STRING,
+  cloudinary_id: STRING,
 }
 ```
 
@@ -199,34 +246,75 @@ npm run start
 
 ```
 {
+  id: INCREMENT,
   user_id: INTEGER,
   city_id: INTEGER
 }
 ```
 
+#### Questions
+
+---
+
+```
+{
+  id: INCREMENT,
+  question: STRING,
+  name: STRING
+}
+
+```
+
+#### Options
+
+---
+
+```
+{
+  id: INCREMENT,
+  description: STRING,
+  value: STRING,
+  question_id:INTEGER,
+}
+```
+
 ## Actions
-
-`add(favorite)` -> Adds a new favorite to the user
-
-`get(user_id)` -> Returns a single user by ID to retreive their favorites
-
-`getAll()` -> Returns all favorites
-
-`remove(user_id, city_id)` -> Returns the created org
-
+#### User
+```
+add()             Adds a new user
+getBy(filter)     Returns user based on filter
+getById(id)       Returns a single user by user ID
+getAll()          Returns all users
+update(user, id)  Updates the user
+remove(id)        Deletes everything dependent on the user
+```
 <hr>
 
-`add()` -> Adds a new user
+#### Profile
+```
+getProfileByUserId(id)              Returns the user's profile information by user id
+findProfiles(id)                    Finds a profile by user id
+insertProfileInfo({ ...body, id })  Adds profile information for a user
+updateProfileInfo(id, body)         Updates profile information 
+deleteProfile(id)                   Deletes the profile information but not the user account
+addImage(image, id)                 Adds image to the profile
+deleteImage(id)                     Deletes image 
+```
+<hr>
 
-`getBy(filter)` -> Returns user based on filter
+#### Favorite cities
+```
+add(favorite)               Adds a new favorite to the user
+get(user_id)                Returns a single user by ID to retreive their favorites
+getAll()                    Returns all favorites
+remove(user_id, city_id)    Returns the created org
+```
+<hr>
 
-`getById(id)` -> Returns a single user by user ID
-
-`getAll()` -> Returns all users
-
-`update(user, id)` -> Updates the user
-
-`remove(id)` -> deletes everything dependent on the user
+#### Survey Data
+```
+getSurveyData()    Returns an object with the survey questions and options
+```
 
 ## Contributing
 
