@@ -3,16 +3,16 @@ const Profile = require("./profile-model");
 
 beforeEach(() => db.seed.run());
 
-const user = {
-  user_id: 1,
-  first_name: "Lester",
-  last_name: "Kester",
-  dob: "2001-02-02",
-  address: "876 w 16th St",
-  city: "New York",
-  state: "New York",
-  zip: 92312,
-};
+// const user = {
+//   user_id: 1,
+//   first_name: "Lester",
+//   last_name: "Kester",
+//   dob: "2001-02-02",
+//   address: "876 w 16th St",
+//   city: "New York",
+//   state: "New York",
+//   zip: 92312,
+// };
 
 describe("profile-model", () => {
   describe("post", () => {
@@ -63,7 +63,7 @@ describe("profile-model", () => {
     });
   });
   describe("update", () => {
-    xit("update profile info", async () => {
+    it("update profile info", async () => {
       const updated = await Profile.updateProfileInfo(1, {
         address: "something s blvd st",
         city: "pittsfield",
@@ -72,8 +72,10 @@ describe("profile-model", () => {
         state: "ca",
         zip: 95012,
       });
-      console.log(updated.body);
-      expect().toBe("ca");
+
+      const updatedUser = await Profile.getProfileByUserId(1);
+      console.log(updatedUser);
+      expect(updatedUser[0].state).toBe("ca");
     });
   });
   describe("delete", () => {
