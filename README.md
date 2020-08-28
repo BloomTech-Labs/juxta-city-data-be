@@ -9,7 +9,7 @@ You can find the deployed project at [https://www.findur.city](https://www.findu
 #### Team Lead:
 Kelly Moreira [Github](https://github.com/misskellymore) | [Linkedin](https://www.linkedin.com/in/kemore/)
 
-#### React Developers:
+#### Node.js Developers:
 Ana Tulea [Github](https://github.com/anatulea) | [Linkedin](https://www.linkedin.com/in/anatulea/)
 
 Benjamin Quackenbush [Github](https://github.com/Quack117)
@@ -26,7 +26,7 @@ Sean Birmingham [Github](https://github.com/sean-birmingham) | [Linkedin](https:
 #### Team Lead:
 Haden Moore [Github](https://github.com/HadenMoore) | [Linkedin](https://www.linkedin.com/in/hadenmoore/)
 
-#### React Developers:
+#### Node.js Developers:
 Alfonso Ruiz [Github](https://github.com/alfonsoruiz)
 
 Jack Kim [Github](https://github.com/jackskim)
