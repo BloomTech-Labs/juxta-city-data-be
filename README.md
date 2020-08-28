@@ -3,25 +3,37 @@
 You can find the deployed project at [https://www.findur.city](https://www.findur.city)
 
 ## Contributors
-### WEBPT7 Team
 
-|                                       [Alfonso Ruiz](https://github.com/alfonsoruiz)                                       |                                          [Jack Kim](https://github.com/jackskim)                                          |                                        [Logan Karnes](https://github.com/lkarnes)                                         |                                         [Zac Smith](https://github.com/mrzacsmith)                                          |
-| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
-|                  [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/alfonsoruiz)                  |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/jackskim)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/lkarnes)                    |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/mrzacsmith)                   |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/mralfonsoruiz) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/jackskim/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/logan-karnes) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/mrzacsmith/) |
+### Labs 11 - Second Product Cycle
+
+#### Team Lead:
+Kelly Moreira [Github](https://github.com/misskellymore) | [Linkedin](https://www.linkedin.com/in/kemore/)
+
+#### React Developers:
+Ana Tulea [Github](https://github.com/anatulea) | [Linkedin](https://www.linkedin.com/in/anatulea/)
+
+Benjamin Quackenbush [Github](https://github.com/Quack117)
+
+Brian Leonard [Github](https://github.com/Akaleonard) | [Linkedin](https://www.linkedin.com/in/brian-leonard-808065197/)
+
+Conary Beckford [Github](https://github.com/Conary36)
+
+Sean Birmingham [Github](https://github.com/sean-birmingham) | [Linkedin](https://www.linkedin.com/in/sean-birmingham/)
 
 
-### WEBPT11 Team
-|                                       [Ana Tulea](https://github.com/anatulea)                                             |                                          [Conary Beckford](https://github.com/Conary36)                                   |                                        [Sean Birmingham](https://github.com/sean-birmingham)                              |                                         [Kelly Moreira](https://github.com/misskellymore)                                   |
-| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | 
-|                  [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/anatulea)                     |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/Conary36)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/sean-birmingham)            |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/misskellymore)                |
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/anatulea/)  | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/)             | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/sean-birmingham/)|[ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/kemore/)| 
+### Labs 7 - First Product Cycle
 
-|                                       [Brian Leonard](https://github.com/Akaleonard)                                       |                                          [Benjamin Quackenbush](https://github.com/Quack117)                                          |                                        [Shanda Woods](https://github.com/ShandaWoods)                         |    
-| :------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
-|                  [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/Akaleonard)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/Quack117)                   |                   [<img src="https://github.com/favicon.ico" width="20"> ](https://github.com/ShandaWoods)                |                  
-| [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/)              | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/)             | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="20"> ](https://www.linkedin.com/in/shanda-woods/)|
+#### Team Lead:
+Haden Moore [Github](https://github.com/HadenMoore) | [Linkedin](https://www.linkedin.com/in/hadenmoore/)
 
+#### React Developers:
+Alfonso Ruiz [Github](https://github.com/alfonsoruiz)
+
+Jack Kim [Github](https://github.com/jackskim)
+
+Logan Karnes [Github](https://github.com/lkarnes)
+
+Zac Smith [Github](https://github.com/mrzacsmith)
 <br>
 <br>
 
@@ -66,6 +78,7 @@ This stack was used in complaince with the [Labs Engineering Standards](https://
 - PostgreSQL
 - REST
 - JWT Authentication
+- Cloudinary
 
 #### Dependencies
 
